@@ -66,6 +66,80 @@ public class MonthlyPay implements Wage {
 }
 
 ```
+## Liskov Substitution
+
+>  If class A is a subtype of class B, we should be able to replace B with A without disrupting the behavior of our program.  
+> A derived class must be replaceable with its base class.
+
+``` java
+
+public class Fruit {
+    
+    public void getFruitName() {
+    
+        System.out.println('Fruit');
+        
+    }
+    
+}
+
+public class Jackfruit extends Fruit {
+    
+    public void getFruitName() {
+    
+        System.out.println('Jackfruit');
+        
+    }
+    
+}
+
+public void printFruitName(Fruit fruit) {
+
+    return fruit.getFruitName();
+    
+}
+
+// printFruitName(Fruit fruit) can receive a Fruit arg and also a Jackfruit arg.
+
+```
+
+## Interface Segregation
+
+>  A class should not be forced to implement interfaces and methods that it will not use, larger interfaces should be split into smaller ones. By doing so, we can ensure that implementing classes only need to be concerned about the methods that are of interest to them.
+
+``` java
+
+public interface Mammals {
+
+    public void getMammaryGlands(){ ... };
+    public void pulmonaryBreathing(){ ... };
+    
+}
+
+public interface EggMammals extends Mammals {
+    
+    public void getMammaryGlands(){ ... };
+    public void pulmonaryBreathing(){ ... };
+    public void layEgg(){ ... };
+    
+}
+
+public class Whale implements Mammals() {
+    
+    public void getMammaryGlands(){ ... };
+    public void pulmonaryBreathing(){ ... };
+    
+}
+
+public class Platypus implements EggMammals() {
+    
+    public void getMammaryGlands(){ ... };
+    public void pulmonaryBreathing(){ ... };
+    public void layEgg(){ ... };
+    
+}
+
+```
 
 ### References:
 
