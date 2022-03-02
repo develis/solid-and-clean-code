@@ -42,7 +42,7 @@ public class Chef extends Employee {
 
 ## Open/Closed
 
-> Classes should be open for extension but closed for modification.
+> Classes should be open for extension but closed for modification.  
 > Separate extensible behavior behind an interface, and flip the dependencies.
 
 ``` java
@@ -69,5 +69,5 @@ public class MonthlyPay implements Wage {
 
 ### References:
 
-[A Solid Guide to SOLID Principles](https://www.baeldung.com/solid-principles)
+[A Solid Guide to SOLID Principles](https://www.baeldung.com/solid-principles)  
 [O que é SOLID: O guia completo para você entender os 5 princípios da POO](https://medium.com/desenvolvendo-com-paixao/o-que-é-solid-o-guia-completo-para-você-entender-os-5-princípios-da-poo-2b937b3fc530)
